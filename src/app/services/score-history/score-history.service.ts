@@ -13,7 +13,8 @@ export class ScoreHistoryService {
     public getScoreHistory() {
       let headers: Headers = new Headers({
         Authorization: "bearer " + this.sessionService.token
-      })
+      });
+         
       return this.apiService.get(this._API.api_server + this._API.score_history_url, headers);
     }
 
