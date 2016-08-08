@@ -13,6 +13,6 @@ export class LogoutComponent {
   constructor(private router: Router, private sessionService: SessionService) {
     this.sessionService.logout();
     console.log('Logout');
-    this.router.navigate(['/oauth']);
+    this.router.navigate(['/signin']);
    }
 }

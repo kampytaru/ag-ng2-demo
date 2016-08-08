@@ -50,7 +50,6 @@ export class AlertSettingsComponent implements OnInit {
       "baseline_score_alert": this.model.is_score_point_change_on,
       "risk_level_alert": this.model.is_risk_level_alert_on,
       "reminder_type": -1,
-      "reminder_date": "2014-12-1",
       "is_credit_usage_on": true,
       "is_edit_profile_page": true
     } 
