@@ -18,7 +18,7 @@ export class ScoresComponent implements OnInit {
   ngOnInit() {
     this.scoresService.getScores().subscribe(response => {
       this.scores = response;
-      this.jsResponse = (JSON.stringify(response, undefined, 2)).trim();
+      this.jsResponse = (JSON.stringify(response, undefined, 2));
     }, error => {
       this.router.navigate(['/signin']);
     });
