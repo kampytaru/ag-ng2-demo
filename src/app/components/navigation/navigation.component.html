@@ -1,0 +1,15 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="img/experian-logo.svg" width="122" height="34" alt="Experian">
+      </a>
+      <ul class="nav navbar-nav" *ngIf="sessionService.token">
+        <li><a href="#" routerLink="/scores">Scores</a></li>
+        <li><a href="#" routerLink="/score-history">Score History</a></li>
+        <li><a href="#" routerLink="/alert-settings">Alert Settings</a></li>
+        <li><a href="#" routerLink="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

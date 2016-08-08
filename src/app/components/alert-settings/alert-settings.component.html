@@ -1,0 +1,53 @@
+<div class="panel">
+  <h3>Alert Settings</h3>
+</div>
+<div class="well" *ngIf="showMsg">
+  Saved
+</div>
+<div class="row">
+  <div class="col-xs-12 col-md-6 col-md-offset-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Change notification settings:
+      </div>
+      <div class="panel-body">
+        <div class="col-xs-12">
+          <input type="checkbox" [(ngModel)]="model.is_target_score_on"> Notify me when my Score reaches
+          <select [(ngModel)]="model.target_score">
+            <option *ngFor="let score of _ALERT_SETTINGS.target_scores">{{score}}</option>
+          </select>
+        </div>
+        <div class="col-xs-12">
+          <input type="checkbox" [(ngModel)]="model.is_score_point_change_on">
+          Notify me if my score changes by 
+          <select [(ngModel)]="model.score_point_change_amount">
+            <option *ngFor="let change of _ALERT_SETTINGS.change_amount">{{change}}</option>
+          </select>
+        </div>
+        <div class="col-xs-12">
+          <input type="checkbox" [(ngModel)]="model.is_risk_level_alert_on">
+          Notify me if my risk level changes
+        </div>
+      </div>
+      <div class="panel-footer">
+          <button (click)="submitChanges()" class="btn btn-default center-block">Submit Changes</button>
+      </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h3>JSON Response:</h3>
+    <pre>
+      {{jsResponse}}
+    </pre>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h3>JSON PUT:</h3>
+    <pre>
+      {{jsPut}}
+    </pre>
+  </div>
+</div>

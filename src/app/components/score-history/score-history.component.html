@@ -1,0 +1,44 @@
+<div class="panel">
+  <h3>Score History:</h3>
+</div>
+<div class="form-group">
+  <div class="col-xs-12 col-md-10 col-md-offset-1">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Score History List
+      </div>
+      <div class="panel-body">
+        <table class="table">
+          <thead>
+            <td>Score Model</td>
+            <td>Bureau</td>
+            <td>Score</td>
+            <td>Date</td>
+            <td>Datasource</td>
+            <td>Datasource ID</td>
+            <td>Credit Rating</td>
+          </thead>
+          <tr *ngFor="let score of score_history">
+            <td>{{score.score_model}}</td>
+            <td>{{score.bureau}}</td>
+            <td>{{score.credit_score}}</td>
+            <td>{{score.score_date | date: 'MMM d, y'}}</td>
+            <td>{{score.datasource_type}}</td>
+            <td>{{score.data_source_id}}</td>
+            <td>{{score.credit_rating}}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="panel-footer">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h3>JSON Response:</h3>
+    <pre>
+      {{jsResponse}}
+    </pre>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="panel">
+  <h3>Scores</h3>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-md-4" *ngFor="let score of scores">
+    <div class="panel panel-default">
+      <div class="panel-heading">{{score.bureau}}</div>
+      <div class="panel-body">
+        <h2 class="text-center">{{score.credit_score}}</h2>
+      </div>
+      <table class="table">
+        <tr>
+          <td>Score Model</td>
+          <td>{{score.score_model}}</td>
+        </tr>
+        <tr>
+          <td>Score Date</td>
+          <td>{{score.score_date | date: 'MMM d, y'}}</td>
+        </tr>
+        <tr>
+          <td>Datasource</td>
+          <td>{{score.datasource_type}}</td>
+        </tr>
+        <tr>
+          <td>Datasource ID</td>
+          <td>{{score.data_source_id}}</td>
+        </tr>
+        <tr>
+          <td>Credit Rating</td>
+          <td>{{score.credit_rating}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h3>JSON Response:</h3>
+    <pre class="prettyprint linenums">
+      {{jsResponse}}
+    </pre>
+  </div>
+</div>
