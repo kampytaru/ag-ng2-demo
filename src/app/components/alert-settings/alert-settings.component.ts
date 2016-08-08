@@ -40,18 +40,11 @@ export class AlertSettingsComponent implements OnInit {
 
   submitChanges() {
     let body: any = {
-      "text_message": true,
-      "start_time": "10:00",
-      "end_time": "11:00",
-      "time_zone_id": 5,
       "target_score": this.model.target_score,
       "range_against_baseline": this.model.range_against_baseline,
       "target_score_alert": this.model.is_target_score_on,
       "baseline_score_alert": this.model.is_score_point_change_on,
       "risk_level_alert": this.model.is_risk_level_alert_on,
-      "reminder_type": -1,
-      "is_credit_usage_on": true,
-      "is_edit_profile_page": true
     } 
 
 
